@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @links = RecentLinks.list
+    @hotreads = Read.all
   end
 end

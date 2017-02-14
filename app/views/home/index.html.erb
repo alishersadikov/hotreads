@@ -1,19 +1,14 @@
-<h2>Recently created links</h2>
+<h2>This is the top ten list:</h2>
 
-<table>
-  <thead>
+<% @hotreads.each do |hotread| %>
+  <table>
     <tr>
-      <th>Title</th>
       <th>URL</th>
+      <th>Viewed times</th>
     </tr>
-  </thead>
-
-  <tbody>
-    <% @links.each do |link| %>
-      <tr>
-        <td><%= link[:title] %></td>
-        <td><%= link[:url] %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <tr>
+      <td><%=hotread.url%></td>
+      <td><%=hotread%></td>
+    </tr>
+  </table>
+<% end %>
