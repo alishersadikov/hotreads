@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
   def index
-    @hotreads = Read.all
+    @hotreads = Read.hotreads
   end
 end
